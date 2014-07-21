@@ -1,43 +1,52 @@
 <!DOCTYPE HTML>
+<!-- Its time to start cooking! -->
 <style>
-#clock {
-    background: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
-    color: transparent;
-    -webkit-background-clip: text;
-    font-size: 15vw;
-    text-align: center;
-    -webkit-background-position: 0px 0px;
-    -webkit-background-repeat: repeat;
-    -webkit-animation: animatedBackground 1s linear infinite;
-    background-size: 20%;
- }
-html {
-    background: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
-    overflow: hidden;
-    font-family: Comic Sans, Comic Sans MS;
-    -webkit-background-position: 0px 0px;
-    -webkit-background-repeat: repeat;
-    -webkit-animation: animatedBackground-reverse 1s linear infinite, baker 5s linear infinite;
-    background-size: 20%;
-    height: 100%;
-}
-@-webkit-keyframes animatedBackground {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
-}
-@-webkit-keyframes animatedBackground-reverse {
-    from { background-position: 100% 0; }
-    to { background-position: 0 0; }
-}
-@-webkit-keyframes baker {
-    from { -webkit-filter: hue-rotate(0deg);}
-    to { -webkit-filter: hue-rotate(360deg);}
-}
-@-webkit-keyframes baked {
-    from { -webkit-filter: invert(0%);}
-    to { -webkit-filter: invert(100%);}
-    
-} 
+    #clock {
+        background: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+        color: transparent;
+        -webkit-background-clip: text;
+        font-size: 18vmin;
+        font-family: Comic Sans, Comic Sans MS;
+        text-align: center;
+        -webkit-background-position: 0px 0px;
+        -webkit-background-repeat: repeat;
+        -webkit-animation: animatedBackground 1s linear infinite;
+        background-size: 20%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    html {
+        background: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+        -webkit-background-position: 0px 0px;
+        -webkit-background-repeat: repeat;
+        -webkit-animation: animatedBackground-reverse 1s linear infinite, baker 5s linear infinite;
+        background-size: 20%;
+    }
+    body {
+        display: table;
+        text-align: center;
+    }
+    html, body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    @-webkit-keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    @-webkit-keyframes animatedBackground-reverse {
+        from { background-position: 100% 0; }
+        to { background-position: 0 0; }
+    }
+    @-webkit-keyframes baker {
+        from { -webkit-filter: hue-rotate(0deg);}
+        to { -webkit-filter: hue-rotate(360deg);}
+    }
+    @-webkit-keyframes baked {
+        from { -webkit-filter: invert(0%);}
+        to { -webkit-filter: invert(100%);}
+    }
 </style>
 <script>
     function time() {
