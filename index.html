@@ -19,7 +19,7 @@
         background: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
         -webkit-background-position: 0px 0px;
         -webkit-background-repeat: repeat-x;
-        -webkit-animation: animatedBackground-reverse 1s linear infinite, baker 5s linear infinite;
+        -webkit-animation: animatedBackground-reverse 1s linear infinite, increaseTemperature 5s linear infinite;
         background-size: 20%;
     }
     body {
@@ -39,13 +39,9 @@
         from { background-position: 100% 0; }
         to { background-position: 0 0; }
     }
-    @-webkit-keyframes baker {
+    @-webkit-keyframes increaseTemperature {
         from { -webkit-filter: hue-rotate(0deg);}
         to { -webkit-filter: hue-rotate(360deg);}
-    }
-    @-webkit-keyframes baked {
-        from { -webkit-filter: invert(0%);}
-        to { -webkit-filter: invert(100%);}
     }
 </style>
 <script>
